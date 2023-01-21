@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+
+body { 
+ @apply bg-neutral-900 text-white ;
+}
+p {
+  @apply leading-normal  text-base md:text-xl;
+}
+ h2, h3 {
+  @apply text-center;
+}
+h2 {
+  @apply font-black text-5xl md:text-6xl;
+}
+h3 {
+  @apply font-black text-3xl md:text-4xl;
+}
+.nav__item {
+  @apply hover:text-orange-300 font-bold text-lg hover:underline;
+}
+.buttonV1 {
+  @apply text-base bg-orange-400 font-bold border-t border-t-orange-300 py-3 inline-block md:w-1/2 lg:w-1/4 text-center rounded-md hover:bg-orange-500 hover:border-t-orange-400 transition-colors duration-150 ease-in-out;
+}
+.buttonV2 {
+  @apply bg-orange-500 font-bold border-t border-t-orange-400 py-3 block md:inline-block w-full md:w-1/4 text-center rounded-md hover:bg-orange-600 hover:border-t-orange-500 transition-colors duration-150 ease-in-out;
+}
+.rotateimg {
+  animation: pizza 30s linear infinite;
+  @keyframes pizza {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+}
+.pizzas__pizza {
+  @apply w-full h-full border border-orange-300 relative drop-shadow-[0_0_10px_#0C0C0C] rounded-lg before:flex 
+  before:absolute before:w-full before:h-full 
+  before:justify-center before:items-center before:bg-black
+  before:opacity-75 before:rounded-lg before:transition-all
+  before:duration-300 before:ease-in-out hover:before:opacity-0;
+}
+.pizzas__img {
+  @apply rounded-lg;
+}
+.pizzas__img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+}
+.brand {
+  @apply text-4xl transition-colors duration-150 ease-in-out hover:text-orange-300;
+}
+.footer__sms {
+  @apply p-2 text-center rounded-md m-2 w-full mx-auto;
+}
+.footer__sms--success {
+  animation: succ 3s ease-in-out infinite;
+  @keyframes succ {
+    0% {
+      @apply bg-green-500;
+    }
+    50% {
+      @apply bg-green-600;
+    }
+    100% {
+      @apply bg-green-500;
+    }
+  }
+}
+
+.footer__sms--error {
+  animation: sms 3s ease-in-out infinite;
+  @keyframes sms {
+    0% {
+      @apply bg-red-500;
+    }
+    50% {
+      @apply bg-red-600;
+    }
+    100% {
+      @apply bg-red-500;
+    }
+  }
+}
+.footer__input {
+  @apply flex gap-2 flex-col;
+}
+.footer__input input, .footer__input textarea{
+  @apply rounded-lg p-3 border-t border-t-neutral-700 bg-neutral-800;
+}
+
+@tailwind utilities;
